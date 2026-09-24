@@ -1,6 +1,6 @@
 # BLE Audio OPUS Demo
 
-A Bluetooth Low Energy audio streaming sample based on **NCS 3.1.0**, featuring OPUS audio codec integration. This demo supports multiple BLE connections and transmits real-time audio streams through BLE to a dongle device.
+A Bluetooth Low Energy audio streaming sample based on **NCS 3.4.0**, featuring OPUS audio codec integration. This demo supports multiple BLE connections and transmits real-time audio streams through BLE to a dongle device.
 
 ## Overview
 
@@ -14,7 +14,7 @@ This project consists of two main components:
 - **nRF54L15 DK** - Microphone device (audio source)
 - **nRF52840 DK** - Dongle device (USB audio output recommended)
 - **USB cables** - For power and audio output
-- **nRF Connect SDK 3.1.0+** - Development environment
+- **nRF Connect SDK 3.4.0** - Development environment
 
 ## Build Instructions
 
@@ -22,7 +22,7 @@ This project consists of two main components:
 
 ```bash
 cd ble_microphone
-west build -b nrf54l15dk_nrf54l15_cpuapp
+west build -b nrf54l15dk/nrf54l15/cpuapp
 ```
 
 ### 2. Build Dongle Firmware
@@ -31,10 +31,10 @@ west build -b nrf54l15dk_nrf54l15_cpuapp
 cd ../dongle
 
 # For USB audio output (nRF52840, recommended)
-west build -b nrf52840dk_nrf52840
+west build -b nrf52840dk/nrf52840
 
 # Or for IIS speaker output (nRF54L15, doesn't support yet)
-# west build -b nrf54l15dk_nrf54l15_cpuapp
+# west build -b nrf54l15dk/nrf54l15/cpuapp
 ```
 
 ### 5. Flash to Devices

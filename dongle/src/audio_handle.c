@@ -198,7 +198,6 @@ void audio_buffer_handle(void)
     {
 		// uint16_t pcm_index = 0;
 		int frame_size = 0;
-		uint8_t devID = rx_payload.dev_id;
 		uint32_t packet_id = rx_payload.data[0] | (rx_payload.data[1] << 8) | (rx_payload.data[2] << 16) | (rx_payload.data[3] << 24);
         // LOG_INF("Packet received[%d] from %d, 0x%02x, 0x%02x, 0x%02x, 0x%02x  ", rx_payload.length,			
 		// 		devID, rx_payload.data[0],rx_payload.data[1], rx_payload.data[2],rx_payload.data[3]);
